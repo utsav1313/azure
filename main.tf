@@ -25,5 +25,74 @@ resource "azurerm_app_service_plan" "utsav_app" {
   sku {
     tier = "Standard"
     size = "S1"
-  }
+ }
+resource "azurerm_storage_account" "utsav_group" {
+  name                     = "demo_storage"
+  resource_group_name      = azurerm_resource_group.utsav_group.name
+  location                 = azurerm_resource_group.utsav_group.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+
+  
 }
+
+resource "azurerm_storage_container" "utsav_group_demo" {
+  name                  = "qwe"
+  storage_account_name  = azurerm_storage_account.utsav_group.name
+  container_access_type = "private"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
