@@ -13,7 +13,7 @@ provider "azurerm" {
 
 }
 
-resource "azurerm_resource_group" "utsav" {
-  name     = "utsav"
+resource "azurerm_resource_group" "utsav_group" {
+  name     = "utsav_group"
   location = "central india"
 }
