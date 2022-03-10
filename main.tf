@@ -27,15 +27,15 @@ resource "azurerm_app_service_plan" "app_service" {
     size = "S1"
   }
 }
-resource "azurerm_app_service" "utsav_group" {
-  name                = "utsav"
+resource "azurerm_app_service" "utsavpli13131" {
+  name                = "utsavpli13131"
   location            = azurerm_resource_group.utsav_group.location
   resource_group_name = azurerm_resource_group.utsav_group.name
   app_service_plan_id = azurerm_app_service_plan.app_service.id
 }
 
-resource "azurerm_storage_account" "utsavstorage" {
-  name                     = "utsavstorage"
+resource "azurerm_storage_account" "utsav_group" {
+  name                     = "apiutsavstorage13313"
   resource_group_name      = azurerm_resource_group.utsav_group.name
   location                 = azurerm_resource_group.utsav_group.location
   account_tier             = "Standard"
@@ -45,8 +45,6 @@ resource "azurerm_storage_account" "utsavstorage" {
     environment = "demo"
   }
 }
-
-
 
 
 

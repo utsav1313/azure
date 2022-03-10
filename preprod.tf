@@ -1,5 +1,5 @@
-variable "preprod_var"{
-    description ="preprod variable"
-    default ="utsav_group"
+variable "preprod_var" {
+  description = "preprod variable"
+  default     = "utsav_group"
 
 }
