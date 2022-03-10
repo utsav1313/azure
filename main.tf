@@ -34,6 +34,18 @@ resource "azurerm_app_service" "utsav_group" {
   app_service_plan_id = azurerm_app_service_plan.app_service.id
 }
 
+resource "azurerm_storage_account" "utsavstorage" {
+  name                     = "utsavstorage"
+  resource_group_name      = azurerm_resource_group.utsav_group.name
+  location                 = azurerm_resource_group.utsav_group.location
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+
+  tags = {
+    environment = "demo"
+  }
+}
+
 
 
 
